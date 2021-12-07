@@ -1,0 +1,34 @@
+#watch{
+    color: #fff;
+    text-shadow:
+      /* White glow */
+      0 0 7px #fff,
+      0 0 8px #fff,
+      0 0 1px #fff,
+      /* Green glow */
+      0 0 12px #0fa,
+      0 0 52px #0fa,
+      0 0 62px #0fa,
+      0 0 72px #0fa,
+      0 0 121px #0fa;
+}
+.rounded-circle{
+    color: #fff;
+    text-shadow:
+      /* White glow */
+      0 0 1px #fff,
+      0 0 1px #fff,
+      0 0 0px #fff,
+      /* Green glow */
+      0 0 0px #0fa,
+      0 0 1px #0fa,
+      0 0 1px #0fa,
+      0 0 1px #0fa,
+      0 0 1px #0fa;
+    transition: all 0.5s;
+
+}
+.rounded-circle:hover{
+    transition: all 0.5s;
+    transform: scale(0.9);
+}
