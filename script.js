@@ -27,35 +27,29 @@ class Container {
         //     }
         // )
     }
+    stopF(){
+        clearInterval(this.funcİtem)
+    }
+splitF(){
+    // clearInterval(startGame.funcİtem)
+    this.arr.push(this.realTime)
+    document.querySelector("#splitWatch").innerHTML = this.arr.map((q, i)=>{
+        return `<div class="d-flex justify-content-between text-white mt-2 pl-3 pr-3 pb-1" style="font-size: 20px; border-bottom: 1px solid #0fa">
+        <div>${i+1}.</div>
+        <div id="splitWatch">${q}</div>
+    </div>`
+    }).join("")
+}
+
 }
 var startGame = new Container()
 
 startGame.play.addEventListener("click", function(){
     startGame.playF()
 })
-
-// startGame.play("click", function(){
-//     clearInterval(startGame.funcİtem)
-//     startGame.funcİtem = setInterval(
-//         function play(){
-//             startGame.realTime = startGame.secondToMinute(second)
-//             second++
-//             document.querySelector('#watch').innerHTML = startGame.realTime
-//         },
-//         1000
-//     )
-// }
-// )
-// startGame.stop("click", function(){
-//     clearInterval(startGame.funcİtem)
-// })
-// startGame.plit("click", function(){
-//     // clearInterval(startGame.funcİtem)
-//     startGame.arr.push(startGame.realTime)
-//     document.querySelector("#splitWatch").innerHTML = startGame.arr.map((q, i)=>{
-//         return `<div class="d-flex justify-content-between text-white mt-2 pl-3 pr-3 pb-1" style="font-size: 20px; border-bottom: 1px solid #0fa">
-//         <div>${i+1}.</div>
-//         <div id="splitWatch">${q}</div>
-//     </div>`
-//     }).join("")
-// })
+startGame.stop.addEventListener("click", function(){
+    startGame.stopF()
+})
+startGame.split.addEventListener("click", function(){
+    startGame.splitF()
+})
